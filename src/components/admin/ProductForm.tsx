@@ -164,7 +164,10 @@ export default function ProductForm({ initialData, onSubmit, onCancel }: Product
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">Зображення</label>
-          <ImageUpload onUpload={handleImageUpload} initialImages={formData.images} />
+           <ImageUpload 
+             value={formData.images || []} 
+             onChange={handleImageUpload} 
+           />
         </div>
       </div>
 

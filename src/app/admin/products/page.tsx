@@ -5,7 +5,7 @@ import { productService } from '@/services/productService';
 import { Product } from '@whiskers-bows/shared';
 import Modal from '@/components/ui/Modal';
 import ProductForm from '@/components/admin/ProductForm';
-import { Plus, Edit, Trash2, Package } from '@tabler/icons-react';
+import { IconPlus, IconEdit, IconTrash, IconPackage } from '@tabler/icons-react';
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -82,7 +82,7 @@ export default function AdminProductsPage() {
           onClick={handleAddProduct}
           className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/30 font-medium"
         >
-          <Plus size={20} />
+          <IconPlus size={20} />
           Додати товар
         </button>
       </div>
@@ -133,13 +133,13 @@ export default function AdminProductsPage() {
                         onClick={() => handleEditProduct(product)}
                         className="p-2 text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-lg transition-all"
                       >
-                        <Edit size={18} />
+                         <IconEdit size={18} />
                       </button>
                       <button 
                         onClick={() => handleDeleteProduct(product.id)}
                         className="p-2 text-gray-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-lg transition-all"
                       >
-                        <Trash2 size={18} />
+                         <IconTrash size={18} />
                       </button>
                     </div>
                   </td>
@@ -149,7 +149,7 @@ export default function AdminProductsPage() {
                 <tr>
                   <td colSpan={5} className="px-6 py-20 text-center text-gray-500">
                     <div className="flex flex-col items-center gap-3">
-                      <Package size={48} className="text-gray-300" />
+                      <IconPackage size={48} className="text-gray-300" />
                       <p>Товарів поки немає. Додайте перший товар!</p>
                     </div>
                   </td>

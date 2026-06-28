@@ -15,7 +15,7 @@ interface ImageUploadProps {
   error?: string;
 }
 
-export function ImageUpload({ value, onChange, error }: ImageUploadProps) {
+export default function ImageUpload({ value, onChange, error }: ImageUploadProps) {
   const { notify } = useNotification();
   const { confirm } = useConfirmation();
   const [uploading, setUploading] = useState(false);
@@ -109,7 +109,7 @@ export function ImageUpload({ value, onChange, error }: ImageUploadProps) {
       {value.length > 0 ? (
         <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="images" direction="horizontal">
-            {(provided) => (
+             {(provided: any) => (
               <div
                 {...provided.droppableProps}
                 ref={provided.innerRef}
@@ -117,7 +117,7 @@ export function ImageUpload({ value, onChange, error }: ImageUploadProps) {
               >
                 {value.map((url, index) => (
                     <Draggable key={`img-${index}`} draggableId={`img-${index}`} index={index}>
-                    {(provided, snapshot) => (
+                     {(provided: any, snapshot: any) => (
                       <div
                         ref={provided.innerRef}
                         {...provided.draggableProps}

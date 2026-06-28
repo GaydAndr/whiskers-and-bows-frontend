@@ -6,8 +6,8 @@ import { useRouter } from 'next/navigation';
 import { productService } from '@/services/productService';
 import { useNotification } from '@/context/NotificationContext';
 import { useConfirmation } from '@/context/ConfirmationContext';
-import { Product } from '@whiskers-bows/shared';
-import { ImageUpload } from '@/components/ui/ImageUpload';
+import { Product, ProductVariation } from '@whiskers-bows/shared';
+import ImageUpload from '@/components/ui/ImageUpload';
 import Link from 'next/link';
 import { API_BASE_URL } from '@/config/api';
 
@@ -258,13 +258,13 @@ export default function AdminPage() {
       const matchesCategory = categoryFilter === 'All' || p.category === categoryFilter;
       return matchesSearch && matchesCategory;
     })
-    .sort((a, b) => {
-      const aVal = a[sortColumn];
-      const bVal = b[sortColumn];
-      if (aVal < bVal) return sortDirection === 'asc' ? -1 : 1;
-      if (aVal > bVal) return sortDirection === 'asc' ? 1 : -1;
-      return 0;
-    });
+     .sort((a, b) => {
+       const aVal = a[sortColumn] ?? '';
+       const bVal = b[sortColumn] ?? '';
+       if (aVal < bVal) return sortDirection === 'asc' ? -1 : 1;
+       if (aVal > bVal) return sortDirection === 'asc' ? 1 : -1;
+       return 0;
+     });
 
   return (
     <div className="container mx-auto px-4 py-12">

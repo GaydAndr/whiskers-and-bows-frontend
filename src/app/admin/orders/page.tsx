@@ -42,7 +42,7 @@ export default function AdminOrdersPage() {
 
   const filteredOrders = orders
     .filter(order => {
-      const matchesDate = !filterDate || order.createdAt?.startsWith(filterDate);
+      const matchesDate = !filterDate || new Date(order.createdAt!).toISOString().startsWith(filterDate);
       const matchesSearch = !searchQuery || 
         order.orderNumber.toString().includes(searchQuery) || 
         order.shippingAddress.firstName.toLowerCase().includes(searchQuery.toLowerCase()) || 
