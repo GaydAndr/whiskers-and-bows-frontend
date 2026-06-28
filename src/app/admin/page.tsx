@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { productService } from '@/services/productService';
 import { useNotification } from '@/context/NotificationContext';
 import { useConfirmation } from '@/context/ConfirmationContext';
-import { Product, ProductVariation } from '@whiskers-bows/shared';
+import { Product, ProductVariation } from '@/shared/types';
 import ImageUpload from '@/components/ui/ImageUpload';
 import Link from 'next/link';
 import { API_BASE_URL } from '@/config/api';

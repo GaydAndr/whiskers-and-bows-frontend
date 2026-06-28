@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Product } from '@whiskers-bows/shared';
+import { Product } from '@/shared/types';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 import { IconHeart } from '@tabler/icons-react';

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Product, ProductVariation } from '@whiskers-bows/shared';
+import { Product, ProductVariation } from '@/shared/types';
 import { useAuth } from './AuthContext';
 import { productService } from '@/services/productService';
 import { useNotification } from '@/context/NotificationContext';

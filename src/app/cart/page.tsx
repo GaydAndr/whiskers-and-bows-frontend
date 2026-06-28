@@ -6,7 +6,7 @@ import { useCart } from '@/context/CartContext';
 import { orderService } from '@/services/orderService';
 import { useAuth } from '@/context/AuthContext';
 import { useNotification } from '@/context/NotificationContext';
-import { Order } from '@whiskers-bows/shared';
+import { Order } from '@/shared/types';
 
 
 export default function CartPage() {

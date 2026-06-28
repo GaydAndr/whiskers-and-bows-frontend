@@ -1,5 +1,5 @@
 import { API_BASE_URL } from '../config/api';
-import { User } from '@whiskers-bows/shared';
+import { User } from '@/shared/types';
 
 
 export const authService = {

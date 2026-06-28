@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import { authService } from '@/services/authService';
 import { orderService } from '@/services/orderService';
 import { useNotification } from '@/context/NotificationContext';
-import { User, Order } from '@whiskers-bows/shared';
+import { User, Order } from '@/shared/types';
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();

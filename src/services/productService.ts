@@ -1,4 +1,4 @@
-import { Product } from '@whiskers-bows/shared';
+import { Product } from '@/shared/types';
 
 import { API_BASE_URL } from '../config/api';
 

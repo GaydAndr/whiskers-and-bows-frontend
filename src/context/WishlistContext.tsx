@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Product } from '@whiskers-bows/shared';
+import { Product } from '@/shared/types';
 import { useAuth } from './AuthContext';
 import { productService } from '@/services/productService';
 import { useNotification } from '@/context/NotificationContext';

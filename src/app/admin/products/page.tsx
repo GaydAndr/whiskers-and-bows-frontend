@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { productService } from '@/services/productService';
-import { Product } from '@whiskers-bows/shared';
+import { Product } from '@/shared/types';
 import Modal from '@/components/ui/Modal';
 import ProductForm from '@/components/admin/ProductForm';
 import { IconPlus, IconEdit, IconTrash, IconPackage } from '@tabler/icons-react';

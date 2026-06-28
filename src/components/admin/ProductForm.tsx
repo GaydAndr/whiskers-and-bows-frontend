@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Product, CategoryName, ProductVariation } from '@whiskers-bows/shared';
+import { Product, CategoryName, ProductVariation } from '@/shared/types';
 import ImageUpload from '../ui/ImageUpload';
 
 interface ProductFormProps {

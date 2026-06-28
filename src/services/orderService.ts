@@ -1,4 +1,4 @@
-import { Order, OrderItem } from '@whiskers-bows/shared';
+import { Order, OrderItem } from '@/shared/types';
 
 import { API_BASE_URL } from '../config/api';
 

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { orderService } from '@/services/orderService';
-import { Order } from '@whiskers-bows/shared';
+import { Order } from '@/shared/types';
 import { useNotification } from '@/context/NotificationContext';
 
 export default function AdminOrdersPage() {

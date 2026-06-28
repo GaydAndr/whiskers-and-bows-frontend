@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { productService } from '@/services/productService';
-import { Product, ProductVariation } from '@whiskers-bows/shared';
+import { Product, ProductVariation } from '@/shared/types';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
